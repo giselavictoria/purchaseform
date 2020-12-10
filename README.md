@@ -1,0 +1,2 @@
+# purchaseform
+DESKTOP ONLY
