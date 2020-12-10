@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Purchase form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="izquierda">
+        <form action="paginaAction" id="purchaseForm">
+          <div class="size">
+            <label for="formaDePago">Forma de pago</label>
+            <select
+              name="formaDePago"
+              id="ListaDeFormaDePago"
+              form="purchaseForm"
+              required
+            >
+              <option value="efectivo">Efectivo</option>
+              <option value="transferencia">Transferencia</option>
+              <option value="tarjetaDeDebito">Tarjeta de debito</option>
+              <option value="tarjetaDeCredito">Tarjeta de credito</option>
+            </select>
+          </div>
+          <div class="size">
+            <label for="numeroDeTarjeta">Numero de tarjeta</label>
+            <input
+              type="text"
+              id="numeroDeTarjeta"
+              name="numeroDeTarjeta"
+              minlength="16"
+              maxlength="16"
+              required
+            />
+          </div>
+          <div class="size">
+            <label for="nombreImpreso">Nombre impreso</label>
+            <input
+              type="text"
+              id="nombreImpreso"
+              name="nombreImpreso"
+              required
+            />
+          </div>
+          <div class="flex">
+            <div class="size">
+              <label for="fechaExpiracion">Fecha exp</label>
+              <input
+                type="month"
+                id="fechaExpiracion"
+                name="fechaExpiracion"
+                required
+              />
+            </div>
+            <div class="size">
+              <label for="cvv">CVV</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                minlength="3"
+                maxlength="3"
+                required
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="derecha">
+        <div class="flexColumn">
+          <h3>Wayfarer classic</h3>
+          <h4>Black Classic G-15</h4>
+          <img src="img/lentes.png" alt="Lentes Wayfarer classic" class="img" />
+          <p>$150</p>
+          <button type="submit">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
